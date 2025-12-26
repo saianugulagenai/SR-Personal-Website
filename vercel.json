@@ -1,8 +1,6 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+    "framework": "nextjs",
+    "buildCommand": "cd nextjs-website && npm install && npm run build",
+    "outputDirectory": "nextjs-website/.next",
+    "installCommand": "echo 'Skipping root install'"
 }
