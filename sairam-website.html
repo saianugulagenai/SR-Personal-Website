@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaiRam Anugula | GTM Strategy & Revenue Operations Leader</title>
+    <meta name="description" content="15+ years enabling revenue growth through data-driven GTM strategy, sales operations, and business analytics for Cloud, SaaS, and AI companies.">
+    <meta name="keywords" content="GTM Strategy, Revenue Operations, Business Analytics, Sales Operations, Cloud, SaaS, AI, Partner Strategy">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SaiRam Anugula | GTM Strategy & Revenue Operations Leader">
+    <meta property="og:description" content="Architecting Revenue Growth Through Data-Driven GTM Excellence">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/og-image.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #0f2744;
+            --slate: #334155;
+            --slate-light: #64748b;
+            --gold: #c9a962;
+            --gold-light: #d4b87a;
+            --cream: #faf9f7;
+            --white: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --gradient-gold: linear-gradient(135deg, #c9a962 0%, #e8d5a3 50%, #c9a962 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.25rem 0;
+            transition: all 0.4s ease;
+        }
+        .nav.scrolled {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gradient-gold);
+            color: var(--navy);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 98, 0.3);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            margin: 5px 0;
+        }
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--navy);
+            z-index: 999;
+            padding: 6rem 2rem;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .mobile-nav.active { display: flex; }
+        .mobile-nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-family: 'Instrument Serif', serif;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: var(--navy);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(ellipse at 20% 50%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 169, 98, 0.05) 0%, transparent 40%);
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(201, 169, 98, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero-label::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 560px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+        .hero-stat-value {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--navy);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(201, 169, 98, 0.25);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-visual-ring {
+            position: absolute;
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite;
+        }
+        .hero-visual-ring:nth-child(1) { width: 300px; height: 300px; }
+        .hero-visual-ring:nth-child(2) { width: 400px; height: 400px; animation-delay: 1s; }
+        .hero-visual-ring:nth-child(3) { width: 500px; height: 500px; animation-delay: 2s; }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.02); }
+        }
+        .hero-keywords {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+        .keyword {
+            position: absolute;
+            background: rgba(15, 39, 68, 0.9);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            animation: float 6s ease-in-out infinite;
+        }
+        .keyword:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+        .keyword:nth-child(2) { top: 25%; right: -20px; animation-delay: 0.5s; }
+        .keyword:nth-child(3) { bottom: 25%; right: -40px; animation-delay: 1s; }
+        .keyword:nth-child(4) { bottom: 0; left: 50%; transform: translateX(-50%); animation-delay: 1.5s; }
+        .keyword:nth-child(5) { bottom: 25%; left: -40px; animation-delay: 2s; }
+        .keyword:nth-child(6) { top: 25%; left: -20px; animation-delay: 2.5s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Sections */
+        .section { padding: 6rem 2rem; }
+        .section-dark { background: var(--navy); color: var(--white); }
+        .section-alt { background: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: inherit;
+        }
+        .section-dark .section-title { color: var(--white); }
+
+        /* Industries */
+        .industries-section {
+            padding: 4rem 2rem;
+            background: var(--white);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .industries-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .industries-label {
+            font-size: 0.75rem;
+            color: var(--slate-light);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .industries-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .industry-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--slate);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .industry-item:hover { opacity: 1; }
+        .industry-icon { width: 20px; height: 20px; color: var(--gold); }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .about-image-frame {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            aspect-ratio: 4/5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-image-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(201, 169, 98, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .about-initials {
+            font-family: 'Instrument Serif', serif;
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.3;
+        }
+        .about-image-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 120px;
+            height: 120px;
+            border: 1px solid var(--gold);
+            opacity: 0.3;
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .about-lead {
+            font-size: 1.25rem;
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .about-text {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .highlight-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--gold);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .highlight-icon svg { width: 14px; height: 14px; color: var(--navy); }
+        .highlight-text { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .expertise-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+        }
+        .expertise-card:hover::before { transform: scaleX(1); }
+        .expertise-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .expertise-title {
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        .expertise-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* Frameworks */
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .framework-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+        .framework-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        .framework-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(201, 169, 98, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .framework-icon svg { width: 24px; height: 24px; color: var(--gold); }
+        .framework-title {
+            font-size: 1.35rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        .framework-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .framework-features {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .framework-feature {
+            background: rgba(201, 169, 98, 0.1);
+            color: var(--slate);
+            padding: 0.35rem 0.75rem;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Experience */
+        .experience-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        .experience-intro p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .experience-timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(180deg, var(--gold) 0%, rgba(201, 169, 98, 0.2) 100%);
+        }
+        .experience-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+        .experience-item:last-child { padding-bottom: 0; }
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0.5rem;
+            width: 9px;
+            height: 9px;
+            background: var(--gold);
+            border-radius: 50%;
+            transform: translateX(-4px);
+        }
+        .experience-type {
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .experience-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .experience-context {
+            font-size: 1rem;
+            color: var(--slate);
+            margin-bottom: 1rem;
+        }
+        .experience-desc {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .experience-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .metric {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .metric-value {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--slate-light);
+        }
+
+        /* Case Studies */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .case-study-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+        .case-study-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(201, 169, 98, 0.3);
+        }
+        .case-study-tag {
+            display: inline-block;
+            background: rgba(201, 169, 98, 0.15);
+            color: var(--gold);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .case-study-title {
+            font-size: 1.35rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .case-study-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .case-study-results {
+            display: flex;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .result { text-align: center; }
+        .result-value {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.75rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .result-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .contact-use-cases { margin-bottom: 2rem; }
+        .contact-use-cases h4 {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .contact-use-cases ul { list-style: none; }
+        .contact-use-cases li {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+        }
+        .contact-use-cases li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover { color: var(--gold); }
+        .contact-link-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(201, 169, 98, 0.1);
+            border: 1px solid rgba(201, 169, 98, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+        }
+        .contact-link-icon svg { width: 18px; height: 18px; color: var(--gold); }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9a962' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+        .form-select option { background: var(--navy); color: var(--white); }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        .form-textarea { min-height: 120px; resize: vertical; }
+        .form-submit {
+            width: 100%;
+            background: var(--gradient-gold);
+            color: var(--navy);
+            padding: 1rem 2rem;
+            border: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 98, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #050d18;
+            padding: 3rem 2rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-text {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-subtitle { max-width: 100%; }
+            .hero-stats { justify-content: center; }
+            .hero-ctas { justify-content: center; }
+            .hero-visual { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { max-width: 400px; margin: 0 auto; }
+            .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+            .frameworks-grid { grid-template-columns: 1fr; }
+            .case-studies-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-title { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
+            .hero-ctas { flex-direction: column; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .about-highlights { grid-template-columns: 1fr; }
+            .section { padding: 4rem 1.5rem; }
+            .experience-metrics { flex-direction: column; gap: 1rem; }
+            .case-study-results { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">SaiRam<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#frameworks">Frameworks</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Let's Connect</a>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about" onclick="toggleMobileMenu()">About</a>
+        <a href="#expertise" onclick="toggleMobileMenu()">Expertise</a>
+        <a href="#frameworks" onclick="toggleMobileMenu()">Frameworks</a>
+        <a href="#impact" onclick="toggleMobileMenu()">Impact</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-label">GTM Strategy & Revenue Operations</span>
+                <h1 class="hero-title">Architecting Revenue Growth Through <em>Data-Driven</em> Excellence</h1>
+                <p class="hero-subtitle">15+ years enabling revenue growth for Cloud, SaaS, and AI companies through scalable GTM frameworks, agentic automation, and predictive analytics.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">$B+</div>
+                        <div class="hero-stat-label">Revenue Enabled</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">25-40%</div>
+                        <div class="hero-stat-label">Efficiency Gains</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">4000+</div>
+                        <div class="hero-stat-label">Teams Enabled</div>
+                    </div>
+                </div>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn-primary">
+                        Start a Conversation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#frameworks" class="btn-secondary">Explore Frameworks</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-ring"></div>
+                <div class="hero-visual-ring"></div>
+                <div class="hero-visual-ring"></div>
+                <div class="hero-keywords">
+                    <span class="keyword">GTM Strategy</span>
+                    <span class="keyword">Revenue Ops</span>
+                    <span class="keyword">AI Automation</span>
+                    <span class="keyword">Cloud & SaaS</span>
+                    <span class="keyword">Analytics</span>
+                    <span class="keyword">Partnerships</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries-section">
+        <div class="industries-container">
+            <p class="industries-label">Expertise Across Technology Sectors</p>
+            <div class="industries-grid">
+                <span class="industry-item">
+                    <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    Cloud Infrastructure
+                </span>
+                <span class="industry-item">
+                    <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    SaaS & Software
+                </span>
+                <span class="industry-item">
+                    <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
+                    AI & Machine Learning
+                </span>
+                <span class="industry-item">
+                    <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Partner Ecosystems
+                </span>
+                <span class="industry-item">
+                    <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Enterprise Technology
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-frame">
+                        <span class="about-initials">SA</span>
+                    </div>
+                    <div class="about-image-accent"></div>
+                </div>
+                <div class="about-content">
+                    <h2>Building Revenue Engines at Scale</h2>
+                    <p class="about-lead">I architect scalable GTM frameworks and data-driven operating mechanisms that transform go-to-market operations into predictable revenue engines.</p>
+                    <p class="about-text">With 15+ years leading global sales operations and analytics functions at leading cloud and technology companies, I've developed a unique methodology for enabling significant growth through systematic operational excellence.</p>
+                    <p class="about-text">My approach combines strategic vision with execution rigor—leveraging AI-driven automation, predictive analytics, and high-performance team building to deliver measurable business outcomes.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg></div>
+                            <span class="highlight-text">Partner ecosystem strategy at scale</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg></div>
+                            <span class="highlight-text">AI/ML-driven sales intelligence</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg></div>
+                            <span class="highlight-text">Global sales operations transformation</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg></div>
+                            <span class="highlight-text">High-performance team leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="section section-dark" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Core Expertise</span>
+                <h2 class="section-title">Strategic Capabilities</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-number">01</div>
+                    <h3 class="expertise-title">GTM Strategy & Execution</h3>
+                    <p class="expertise-desc">Architecting go-to-market motions for cloud, SaaS, and enterprise workloads across direct, partner, and marketplace channels.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-number">02</div>
+                    <h3 class="expertise-title">Revenue Operations</h3>
+                    <p class="expertise-desc">Building scalable frameworks for goal planning, territory management, pipeline forecasting, and performance analytics.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-number">03</div>
+                    <h3 class="expertise-title">Business Intelligence</h3>
+                    <p class="expertise-desc">Transforming data into actionable insights through self-serve dashboards, predictive modeling, and automated reporting.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-number">04</div>
+                    <h3 class="expertise-title">Partner & Alliance Strategy</h3>
+                    <p class="expertise-desc">Developing partner ecosystems with CSPs, GSIs, ISVs. Expertise in co-sell motions, funding programs, and profitability frameworks.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-number">05</div>
+                    <h3 class="expertise-title">AI & Agentic Automation</h3>
+                    <p class="expertise-desc">Implementing AI-driven solutions for sales automation, pipeline management, and data workflow optimization.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-number">06</div>
+                    <h3 class="expertise-title">Team & Capability Building</h3>
+                    <p class="expertise-desc">Building high-performance teams through coaching, enablement, and scalable operational mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frameworks -->
+    <section class="section section-alt" id="frameworks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Proven Methodologies</span>
+                <h2 class="section-title">Frameworks & Models</h2>
+            </div>
+            <div class="frameworks-grid">
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+                    <h3 class="framework-title">Partner Health Score Model</h3>
+                    <p class="framework-desc">Comprehensive partner evaluation framework measuring Alignment (15%), Capability (30%), Execution (30%), and Quality (25%) to prioritize investments.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">Partner Scoring</li>
+                        <li class="framework-feature">Performance Tracking</li>
+                        <li class="framework-feature">Investment Prioritization</li>
+                        <li class="framework-feature">Cohort Analysis</li>
+                    </ul>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+                    <h3 class="framework-title">Goal Planning Automation</h3>
+                    <p class="framework-desc">Standardized methodology for automating goal planning and target setting. Reduces planning cycles by 30-40% while improving data accuracy.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">Enterprise Planning Tools</li>
+                        <li class="framework-feature">Cascade Automation</li>
+                        <li class="framework-feature">Version Control</li>
+                        <li class="framework-feature">Attainment Tracking</li>
+                    </ul>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3 class="framework-title">Partner Maturity Framework</h3>
+                    <p class="framework-desc">Three-tier classification—Strategic, Focused, Long-tail—enabling differentiated engagement strategies and resource allocation.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">Tier Classification</li>
+                        <li class="framework-feature">Propensity Modeling</li>
+                        <li class="framework-feature">Graduation Paths</li>
+                        <li class="framework-feature">Coverage Optimization</li>
+                    </ul>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                    <h3 class="framework-title">BI & Reporting Architecture</h3>
+                    <p class="framework-desc">End-to-end business intelligence framework including data products, self-serve dashboards, and advanced analytics for forecasting.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">Dashboard Consolidation</li>
+                        <li class="framework-feature">Data Products</li>
+                        <li class="framework-feature">Forecasting Models</li>
+                        <li class="framework-feature">ROB Automation</li>
+                    </ul>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg></div>
+                    <h3 class="framework-title">Agentic Automation Solutions</h3>
+                    <p class="framework-desc">AI-powered automation agents for sales operations including notifications, deal alerts, pipeline management, and workflow optimization.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">CRM Agents</li>
+                        <li class="framework-feature">Batch Processing</li>
+                        <li class="framework-feature">Alert Systems</li>
+                        <li class="framework-feature">Data Pipelines</li>
+                    </ul>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <h3 class="framework-title">Sales Intelligence Platform</h3>
+                    <p class="framework-desc">Unified data architecture integrating CRM, ERP, and third-party sources to deliver standardized analytics for performance and pipeline.</p>
+                    <ul class="framework-features">
+                        <li class="framework-feature">Unified Data Mart</li>
+                        <li class="framework-feature">Self-Serve Portal</li>
+                        <li class="framework-feature">ML Insights</li>
+                        <li class="framework-feature">Customer Profiling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section section-dark" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Business Impact</span>
+                <h2 class="section-title">Transformation Stories</h2>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <span class="case-study-tag">Process Automation</span>
+                    <h3 class="case-study-title">Goal Planning Transformation</h3>
+                    <p class="case-study-desc">Standardized and automated goal planning using enterprise tools, eliminating manual efforts across 30+ managers. Reduced planning timeline significantly.</p>
+                    <div class="case-study-results">
+                        <div class="result"><div class="result-value">25-30%</div><div class="result-label">Productivity Gain</div></div>
+                        <div class="result"><div class="result-value">4000+</div><div class="result-label">Users Enabled</div></div>
+                        <div class="result"><div class="result-value">$1M+</div><div class="result-label">3-Year Savings</div></div>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <span class="case-study-tag">Analytics Transformation</span>
+                    <h3 class="case-study-title">Sales Intelligence Platform</h3>
+                    <p class="case-study-desc">Transformed inconsistent reporting into standardized self-serve BI dashboards. Created unified data mart across 15+ sales segments.</p>
+                    <div class="case-study-results">
+                        <div class="result"><div class="result-value">8-10%</div><div class="result-label">Business Improvement</div></div>
+                        <div class="result"><div class="result-value">30%</div><div class="result-label">Time Saved</div></div>
+                        <div class="result"><div class="result-value">20%</div><div class="result-label">Reports Eliminated</div></div>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <span class="case-study-tag">Partner Strategy</span>
+                    <h3 class="case-study-title">Partner Experience Framework</h3>
+                    <p class="case-study-desc">Developed comprehensive partner intelligence framework with Health Score model and propensity modeling for large partner networks.</p>
+                    <div class="case-study-results">
+                        <div class="result"><div class="result-value">150K+</div><div class="result-label">Partners Profiled</div></div>
+                        <div class="result"><div class="result-value">6</div><div class="result-label">Workloads</div></div>
+                        <div class="result"><div class="result-value">85%</div><div class="result-label">Untapped Potential</div></div>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <span class="case-study-tag">AI Automation</span>
+                    <h3 class="case-study-title">Agentic Sales Operations</h3>
+                    <p class="case-study-desc">Designed agentic solutions for pipeline automation including notification agents, deal alerts, and data workflow automation.</p>
+                    <div class="case-study-results">
+                        <div class="result"><div class="result-value">25-30%</div><div class="result-label">Efficiency Gain</div></div>
+                        <div class="result"><div class="result-value">Real-time</div><div class="result-label">Alerts</div></div>
+                        <div class="result"><div class="result-value">40%</div><div class="result-label">Manual Reduction</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Build Something Together</h2>
+                    <p>Whether you're scaling GTM operations, optimizing partner ecosystems, or building data-driven sales frameworks, I'd welcome the opportunity to explore collaboration.</p>
+                    <div class="contact-use-cases">
+                        <h4>How I Can Help</h4>
+                        <ul>
+                            <li>GTM strategy for Cloud/SaaS companies</li>
+                            <li>Revenue operations transformation</li>
+                            <li>Partner ecosystem optimization</li>
+                            <li>Sales analytics & BI architecture</li>
+                            <li>AI/Agentic automation implementation</li>
+                            <li>Team building & capability development</li>
+                        </ul>
+                    </div>
+                    <div class="contact-links">
+                        <a href="mailto:hello@sairamanugula.com" class="contact-link">
+                            <span class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                            hello@sairamanugula.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/sairamanugula" target="_blank" class="contact-link">
+                            <span class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                            LinkedIn Profile
+                        </a>
+                        <span class="contact-link">
+                            <span class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                            Seattle, Washington
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="interest">I'm interested in</label>
+                            <select id="interest" name="interest" class="form-select" required>
+                                <option value="">Select an option</option>
+                                <option value="advisory">Advisory & Consulting</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="employment">Employment Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 SaiRam Anugula. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/sairamanugula" target="_blank">LinkedIn</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.expertise-card, .case-study-card, .experience-item, .framework-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function() {
+            const btn = this.querySelector('.form-submit');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+</html>
