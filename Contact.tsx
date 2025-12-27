@@ -12,37 +12,51 @@ const useCases = [
   'Team building & capability development',
 ]
 
-const interests = [
-  { value: '', label: 'Select an option' },
-  { value: 'advisory', label: 'Advisory & Consulting' },
-  { value: 'speaking', label: 'Speaking Engagement' },
-  { value: 'collaboration', label: 'Collaboration Opportunity' },
-  { value: 'employment', label: 'Employment Opportunity' },
-  { value: 'other', label: 'Other' },
-]
+
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  // HubSpot Form Configuration
+  const HUBSPOT_PORTAL_ID = '244707398'
+  const HUBSPOT_FORM_GUID = '7399ba13-ec5a-4279-b2ed-eb719508e770'
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     const form = e.currentTarget
     const formData = new FormData(form)
-    
+
     try {
-      // Replace YOUR_FORM_ID with actual Formspree ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' },
-      })
-      
+      const response = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: [
+              { name: 'firstname', value: formData.get('firstname') as string },
+              { name: 'lastname', value: formData.get('lastname') as string },
+              { name: 'email', value: formData.get('email') as string },
+              { name: 'phone', value: formData.get('phone') as string },
+              { name: 'message', value: formData.get('message') as string },
+            ],
+            context: {
+              pageUri: window.location.href,
+              pageName: document.title,
+            },
+          }),
+        }
+      )
+
       if (response.ok) {
         setIsSubmitted(true)
         form.reset()
+      } else {
+        const errorData = await response.json()
+        console.error('HubSpot submission error:', errorData)
       }
     } catch (error) {
       console.error('Form submission error:', error)
@@ -60,20 +74,20 @@ export function Contact() {
             <h2 className="font-serif text-4xl text-white mb-6">
               Let's Build Something Together
             </h2>
-            
+
             <p className="text-white/70 leading-relaxed mb-8">
-              Whether you're scaling GTM operations, optimizing partner ecosystems, 
-              or building data-driven sales frameworks, I'd welcome the opportunity 
+              Whether you're scaling GTM operations, optimizing partner ecosystems,
+              or building data-driven sales frameworks, I'd welcome the opportunity
               to explore collaboration.
             </p>
-            
+
             <div className="mb-8">
               <h4 className="text-gold text-xs font-semibold uppercase tracking-wider mb-4">
                 How I Can Help
               </h4>
               <ul>
                 {useCases.map((item) => (
-                  <li 
+                  <li
                     key={item}
                     className="text-white/70 text-sm py-2 pl-6 relative before:content-['→'] before:absolute before:left-0 before:text-gold"
                   >
@@ -82,9 +96,9 @@ export function Contact() {
                 ))}
               </ul>
             </div>
-            
+
             <div className="flex flex-col gap-4">
-              <a 
+              <a
                 href="mailto:hello@sairamanugula.com"
                 className="flex items-center gap-4 text-white/80 hover:text-gold transition-colors"
               >
@@ -93,8 +107,8 @@ export function Contact() {
                 </span>
                 hello@sairamanugula.com
               </a>
-              
-              <a 
+
+              <a
                 href="https://www.linkedin.com/in/sairamanugula"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,7 +119,7 @@ export function Contact() {
                 </span>
                 LinkedIn Profile
               </a>
-              
+
               <span className="flex items-center gap-4 text-white/80">
                 <span className="w-10 h-10 bg-gold/10 border border-gold/20 flex items-center justify-center">
                   <MapPin size={18} className="text-gold" />
@@ -114,7 +128,7 @@ export function Contact() {
               </span>
             </div>
           </div>
-          
+
           {/* Form */}
           <div className="bg-white/[0.03] border border-white/[0.08] p-8">
             {isSubmitted ? (
@@ -128,18 +142,31 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="mb-6">
-                  <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors"
-                  />
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      name="firstname"
+                      required
+                      className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      name="lastname"
+                      required
+                      className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors"
+                    />
+                  </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
                     Email
@@ -151,29 +178,19 @@ export function Contact() {
                     className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
-                    I'm interested in
+                    Phone Number
                   </label>
-                  <select
-                    name="interest"
+                  <input
+                    type="tel"
+                    name="phone"
                     required
-                    className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors appearance-none cursor-pointer"
-                    style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9a962' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'right 1rem center',
-                    }}
-                  >
-                    {interests.map((opt) => (
-                      <option key={opt.value} value={opt.value} className="bg-navy">
-                        {opt.label}
-                      </option>
-                    ))}
-                  </select>
+                    className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors"
+                  />
                 </div>
-                
+
                 <div className="mb-6">
                   <label className="block text-xs text-white/60 uppercase tracking-wider mb-2">
                     Message
@@ -185,7 +202,7 @@ export function Contact() {
                     className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors resize-y"
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
